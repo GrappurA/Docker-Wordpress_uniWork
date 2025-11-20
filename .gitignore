@@ -1,0 +1,28 @@
+I can absolutely do that\! You are asking for the full list of patterns under the "Sensitive Credentials and Configuration" section from your open `.gitignore` file.
+
+Here is the requested list in the exact format you provided:
+
+```
+# A. SENSITIVE CREDENTIALS AND CONFIGURATION
+
+# 1. WordPress Configuration
+# Contains database connection details and secret salts. MUST be ignored.
+wp-config.php
+
+# 2. Environment Variables (Docker / Local Development)
+# Contains credentials (DB passwords, user info, API keys) used by Docker.
+.env
+.env.*
+docker-compose.override.yml
+.editorconfig
+
+# 3. SSL/TLS Keys (CRITICAL)
+# Private keys must NEVER be committed to Git.
+*.key
+*.pem
+*.csr
+*.crt
+*.key
+certs/
+ssl/
+```
